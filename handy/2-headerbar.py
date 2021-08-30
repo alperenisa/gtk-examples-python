@@ -8,6 +8,7 @@ Handy.init()
 class MyWindow(Handy.Window):
     def __init__(self):
         super().__init__(title="Hello World")
+        self.set_default_size(500, 300)
 
         # WindowHandle
         self.handle = Handy.WindowHandle()
