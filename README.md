@@ -1,5 +1,4 @@
-# gtk-examples-python
-PyGTK examples
+# PyGTK examples
 ## Requirements:
 * Python 3
 * GTK+ 3.0
