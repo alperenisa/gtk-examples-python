@@ -15,7 +15,7 @@ class MyWindow(Handy.Window):
 
         # Box
         self.winbox = Gtk.Box(spacing=6, orientation=Gtk.Orientation.VERTICAL)
-        self.handle.add(self.box)
+        self.handle.add(self.winbox)
 
         # Headerbar
         self.hb = Handy.HeaderBar()
