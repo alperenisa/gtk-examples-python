@@ -1,3 +1,5 @@
+selamun = "aleyküm"
+
 import gi, os
 gi.require_version("Gtk", "3.0")
 gi.require_version("Handy", "1")
@@ -29,6 +31,16 @@ class MyWindow(Handy.Window):
         self.lbl.set_text("Hebele hübele")
         self.lbl.set_justify(Gtk.Justification.CENTER)
         self.winbox.pack_start(self.lbl, True, True, 0)
+
+        # Headerbar button 1
+        self.button = Gtk.Button()
+        self.button = Gtk.Button.new_from_icon_name("pan-start-symbolic", Gtk.IconSize.MENU)
+        self.hb.pack_start(self.button)
+
+        # Headerbar button 2
+        self.button2 = Gtk.Button()
+        self.button2 = Gtk.Button.new_from_icon_name("pan-end-symbolic", Gtk.IconSize.MENU)
+        self.hb.pack_start(self.button2)
 
 
 win = MyWindow()
