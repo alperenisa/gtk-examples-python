@@ -42,7 +42,12 @@ class MyWindow(Handy.Window):
 
     def on_rvBtn_clicked(self, widget):
         reveal = self.revealer.get_reveal_child()
-        self.revealer.set_reveal_child(not reveal)
+        if reveal == True:
+            self.revealer.set_reveal_child(False)
+            self.rvBtn.set_label("Show headerbar")
+        else:
+            self.revealer.set_reveal_child(True)
+            self.rvBtn.set_label("Hide headerbar")
 
 win = MyWindow()
 win.connect("destroy", Gtk.main_quit)
