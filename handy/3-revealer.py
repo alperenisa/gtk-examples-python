@@ -32,7 +32,7 @@ class MyWindow(Handy.Window):
         self.revealer.add(self.hb)
 
         # MainBox
-        self.mainBox = Gtk.Box(spacing=6, orientation=Gtk.Orientation.VERTICAL)
+        self.mainBox = Gtk.Box(spacing=6, orientation=Gtk.Orientation.VERTICAL, halign=Gtk.Align.CENTER, valign=Gtk.Align.CENTER)
         self.winBox.pack_start(self.mainBox, True, False, 0)
 
         # Revealer button
