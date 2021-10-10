@@ -14,7 +14,7 @@ class MyWindow(Handy.Window):
         self.add(self.handle)
 
         # Box
-        self.box = Gtk.Box(spacing=6)
+        self.box = Gtk.Box(spacing=6, halign=Gtk.Align.CENTER, valign=Gtk.Align.CENTER)
         self.handle.add(self.box)
 
         # Button 1
