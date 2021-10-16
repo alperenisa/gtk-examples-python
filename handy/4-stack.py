@@ -59,6 +59,7 @@ class MyWindow(Handy.Window):
         self.hb.pack_start(self.button2)
         self.button2.connect("clicked", self.on_button2_clicked)
 
+    # https://stackoverflow.com/questions/69595073/pygobject-page-switching-with-buttons
     def on_button1_clicked(self, widget):
         pages = self.stack.get_children()
         cur_page = self.stack.get_visible_child()
