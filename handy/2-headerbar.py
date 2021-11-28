@@ -10,7 +10,8 @@ Handy.init()
 class MyWindow(Handy.Window):
     def __init__(self):
         super().__init__(title="Hello World")
-        GLib.set_application_name("Hello world")
+        GLib.set_application_name("Hello World")
+        GLib.set_prgname('Hello World')
         self.set_default_size(500, 300)
 
         # WindowHandle
