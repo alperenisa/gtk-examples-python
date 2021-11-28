@@ -3,13 +3,14 @@ selamun = "aleyküm"
 import gi, os
 gi.require_version("Gtk", "3.0")
 gi.require_version("Handy", "1")
-from gi.repository import Gtk, Handy
+from gi.repository import Gtk, Handy, GLib
 
 Handy.init()
 
 class MyWindow(Handy.Window):
     def __init__(self):
         super().__init__(title="Hello World")
+        GLib.set_application_name("Hello world")
         self.set_default_size(500, 300)
 
         # WindowHandle
