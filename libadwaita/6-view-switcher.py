@@ -39,7 +39,9 @@ class MainWindow (Adw.ApplicationWindow):
       self.box_main
     )
 
-    self.hb = Adw.HeaderBar ()
+    self.hb = Adw.HeaderBar (
+      centering_policy = Adw.CenteringPolicy.STRICT
+    )
     self.box_main.append (self.hb)
 
     self.stack = Adw.ViewStack ()
@@ -47,8 +49,10 @@ class MainWindow (Adw.ApplicationWindow):
       self.stack
     )
 
-    # Squieezer
-    self.sq_viewswitcher = Adw.Squeezer ()
+    # Squeezer
+    self.sq_viewswitcher = Adw.Squeezer (
+      halign = Gtk.Align.FILL,
+    )
     self.sq_viewswitcher.set_switch_threshold_policy (
       Adw.FoldThresholdPolicy.NATURAL
     )
@@ -62,7 +66,11 @@ class MainWindow (Adw.ApplicationWindow):
     )
 
     # ViewSwitcher (wide)
-    self.viewswitcher_wide = Adw.ViewSwitcher ()
+    self.viewswitcher_wide = Adw.ViewSwitcher (
+      halign = Gtk.Align.CENTER,
+      margin_start = 50,
+      margin_end = 50
+    )
     self.viewswitcher_wide.set_policy(
       Adw.ViewSwitcherPolicy.WIDE
     )
@@ -74,7 +82,9 @@ class MainWindow (Adw.ApplicationWindow):
     )
 
     # ViewSwitcher (narrow)
-    self.viewswitcher_narrow = Adw.ViewSwitcher ()
+    self.viewswitcher_narrow = Adw.ViewSwitcher (
+      halign = Gtk.Align.CENTER,
+    )
     self.viewswitcher_narrow.set_policy(
       Adw.ViewSwitcherPolicy.NARROW
     )
